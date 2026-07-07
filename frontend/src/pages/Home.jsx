@@ -3,7 +3,7 @@ import Navbar from "../components/Navbar";
 import UserForm from "../components/UserForm";
 import UserTable from "../components/UserTable";
 import { getUsers } from "../services/userService";
-
+import UserPieChart from "../components/UserPieChart";
 function Home() {
 
     const [users, setUsers] = useState([]);
@@ -37,7 +37,8 @@ function Home() {
                 <UserForm loadUsers={loadUsers} />
 
                 <hr />
-
+<UserPieChart users={users} />
+ <hr />
                 <UserTable users={users} />
 
             </div>
